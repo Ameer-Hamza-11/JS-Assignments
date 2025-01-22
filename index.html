@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;    /* Vertically center */
+  height: 100vh;          /* Full viewport height */
+  background-color: #f7f7f7; /* Light background for better visibility */
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack anchor tags vertically */
+  gap: 15px;              /* Add spacing between anchor tags */
+}
+
+.beautiful-link {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  width: 200px; /* Set a fixed width for better alignment */
+  text-align: center; /* Center the text inside the button */
+}
+
+.beautiful-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-45deg);
+  transition: left 0.3s ease-in-out;
+}
+
+.beautiful-link:hover {
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.beautiful-link:hover::before {
+  left: -50%;
+}
+
+@media (max-width: 768px) {
+  .beautiful-link {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 300px; /* Limit maximum width */
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="Page1.html" class="beautiful-link" target="_blank">Side Tasks</a>
+        <a href="https://ameer-hamza-11.github.io/JS-Assigment-1/" class="beautiful-link" target="_blank">Assignment #1</a>
+        <a href="https://ameer-hamza-11.github.io/JS-Assigment-2/" class="beautiful-link" target="_blank">Assignment #2</a>
+        <a href="https://ameer-hamza-11.github.io/JS-Assignment-3/" class="beautiful-link" target="_blank">Assignment #3</a>
+        <a href="https://ameer-hamza-11.github.io/JS-Assignment-4/" class="beautiful-link" target="_blank">Assignment #4</a>
+      </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

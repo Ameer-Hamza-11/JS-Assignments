@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f4f8; /* Soft background color */
+      font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* Space between buttons */
+    }
+
+    .fancy-button {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradient background */
+      border: none;
+      border-radius: 30px; /* Rounded corners */
+      padding: 12px 30px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fancy-button::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 300%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2); /* Light streak effect */
+      transform: skewX(-45deg);
+      transition: left 0.3s ease-in-out;
+    }
+
+    .fancy-button:hover {
+      background: linear-gradient(90deg, #2575fc, #6a11cb); /* Reverse gradient */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+    }
+
+    .fancy-button:hover::after {
+      left: -50%; /* Move streak effect */
+    }
+
+    .fancy-button:active {
+      transform: scale(0.95); /* Slight shrink on click */
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Reduce shadow */
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="leapyear()" class="fancy-button">Input A year & check it is Leap year or not</button>
+        <button onclick="color()" class="fancy-button">Random Colors & it is Printed on Console</button>
+        <button onclick="randoms()" class="fancy-button">Random Emojis</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
