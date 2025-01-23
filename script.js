@@ -55,10 +55,10 @@ function leapyear() {
     }
   }
   
-  let names = ["bilal", "hamza", "ayan", "areeb", "moiz", "shehram", "anas"];
+  let names = ["bilal", "hamza", "ayan", "areeb", "moiz", "shehram", "anas, 'jameel"];
   function Task2() {
-    let input = prompt("plz input your saved name bilal, hamza, ayan, areeb, moiz, shehram, anas");
-    
+    let input = document.getElementById('Username').value;
+  
     if (names.includes(input)) {
       alert("Name exists");
     } else {

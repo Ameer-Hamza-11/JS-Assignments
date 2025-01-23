@@ -4,13 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+         body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(120deg, #1e3c72, #2a5298); /* Smooth blue gradient */
+      font-family: 'Arial', sans-serif;
+    }
+
+    .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    .custom-input {
+      width: 268    px; /* Compact width */
+      height: 45px;
+      padding: 0 15px;
+      font-size: 14px;
+      border: none;
+      border-radius: 20px;
+      outline: none;
+      background: linear-gradient(135deg, #ffffff, #e0e0e0);
+      box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      color: #333;
+    }
+
+    .custom-input:focus {
+      box-shadow: 0 0 8px rgba(58, 156, 245, 0.8); /* Blue glow */
+      background: linear-gradient(135deg, #fff, #e6f7ff);
+    }
+
+    .custom-input::placeholder {
+      color: #888;
+      font-style: italic;
+    }
+
+    .submit-btn {
+      width: 300px;
+      height: 45px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(135deg, #0072ff, #00c6ff);
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .submit-btn:active {
+      transform: scale(0.95);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+    .names{
+        height: 40px;
+        width: 100%;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+    }
+    .names p{
+        font-size: 12px;
+        color: white;
+    }
+    </style>
 </head>
 <body>
-    
 
 
 
-
+    <div class="form-wrapper">
+     <div class="names">
+        <p>bilal, hamza, ayan, areeb, moiz, shehram, anas,muteeb</p>
+     </div>
+        <input type="text" class="custom-input" placeholder="Enter your Username" id="Username">
+        <button class="submit-btn" onclick="Task2()">Submit</button>
 
 
 
