@@ -65,3 +65,27 @@ function leapyear() {
       alert("name does not exist");
     }
   }
+
+
+
+
+
+  let inputs = [
+    {
+      username: 'bilal',
+      email: 'bmj@gmail.com',
+      password: 'bmj123'
+    }
+  ]
+function Tasks3() {
+ let user = document.getElementById('user').value;
+ let pass = document.getElementById('pass').value;
+ let gmail = document.getElementById('gmail').value;
+
+if (user == inputs.includes(user)) {
+  alert('login successful')
+} else {
+  alert('Login failed, Plz Try Again ')
+}
+
+}
