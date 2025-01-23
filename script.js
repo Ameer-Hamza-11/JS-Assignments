@@ -41,3 +41,27 @@ function leapyear() {
   
     alert(Emojis[randomemojis])
   }
+
+
+
+  function Task1() {
+    let Email = document.getElementById('email').value ;
+    let Password = document.getElementById('password').value;
+
+    if (Email === "bmj@gmail.com" && Password === "bmj123") {
+      alert("login successful");
+    } else {
+      alert("invalid password or email");
+    }
+  }
+  
+  let names = ["bilal", "hamza", "ayan", "areeb", "moiz", "shehram", "anas"];
+  function Task2() {
+    let input = prompt("plz input your saved name bilal, hamza, ayan, areeb, moiz, shehram, anas");
+    
+    if (names.includes(input)) {
+      alert("Name exists");
+    } else {
+      alert("name does not exist");
+    }
+  }
