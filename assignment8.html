@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+    color: #333;
+    text-align: center;
+    padding: 50px;
+  }
+
+  #calculator {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: inline-block;
+  }
+
+  input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  input[type="text"]:focus {
+    border-color: #4a90e2;
+  }
+
+  button {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: #357abd;
+  }
+
+  h2 {
+    color: #4a90e2;
+    margin-top: 20px;
+    font-size: 24px;
+  }
+</style>
+</head>
+<body>
+    
+
+
+
+
+<!-- 
+
+<button onclick="leapyear()">Input A year & check it is Leap year or not</button>
+<button onclick="color()">Random Colors & it is Printed on Console</button>
+<button onclick="randoms()">Random Emojis</button> -->
+
+<div id="calculator">
+    <input type="text" placeholder="Input 1st number" id="num1">
+    <input type="text" placeholder="Input 2nd number" id="num2">
+    <div>
+      <button onclick="add()">+</button>
+      <button onclick="sub()">-</button>
+      <button onclick="multi()">*</button>
+      <button onclick="div()">/</button>
+    </div>
+    <h2 id="text">Result will be show here</h2>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

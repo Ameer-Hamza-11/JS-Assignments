@@ -76,16 +76,90 @@ function leapyear() {
       email: 'bmj@gmail.com',
       password: 'bmj123'
     }
-  ]
-function Tasks3() {
- let user = document.getElementById('user').value;
- let pass = document.getElementById('pass').value;
- let gmail = document.getElementById('gmail').value;
+  ];
 
-if (user == inputs.includes(user)) {
-  alert('login successful')
-} else {
-  alert('Login failed, Plz Try Again ')
+  function Tasks3() {
+    let user = document.getElementById('user').value.trim();
+    let email = document.getElementById('pass').value.trim();
+    let password = document.getElementById('gmail').value.trim();
+
+    // Check if the entered details match any object in the inputs array
+    let isValid = inputs.some(input => 
+      input.username === user && 
+      input.email === email && 
+      input.password === password
+    );
+
+    if (isValid) {
+      alert('Login successful');
+    } else {
+      alert('Login failed, Please Try Again');
+    }
+  }
+
+
+  
+// function leapyear() {
+//   let year = prompt(`Input a year & check it's leap year or not`);
+//   if (year % 4 == 0 && year % 100 !== 0 || year % 400 == 0) {
+//     alert(`${year} is a leap year`);
+// } else {
+//     alert(`${year} is not a leap year`);
+// }
+
+// }
+
+
+
+
+
+
+// let randomcolors = ['Red', 'Blue', 'Green', 'Yellow', 'Purple'];
+
+
+// function color() {
+//   let random = Math.trunc(Math.random() * randomcolors.length)
+//   console.clear()
+//   console.log('Your Lucky color is', randomcolors[random]);
+// }
+
+
+
+
+
+
+
+
+
+
+
+// let Emojis = ['😄', '🥳', '🤔', '😢', '❤️', '🎉'];
+
+// function randoms() {
+//   let randomemojis = Math.trunc(Math.random() *Emojis.length);
+
+
+//   alert(Emojis[randomemojis])
+// }
+
+
+function add() {
+  let num1 = document.getElementById('num1').value *1;
+  let num2 = document.getElementById('num2').value *1;
+  let userinput = document.getElementById('text').innerText = num1+num2;
 }
-
+function sub() {
+  let num1 = document.getElementById('num1').value *1;
+  let num2 = document.getElementById('num2').value *1;
+  let userinput = document.getElementById('text').innerText = num1-num2;
+}
+function multi() {
+  let num1 = document.getElementById('num1').value *1;
+  let num2 = document.getElementById('num2').value *1;
+  let userinput = document.getElementById('text').innerText = num1*num2;
+}
+function div() {
+  let num1 = document.getElementById('num1').value *1;
+  let num2 = document.getElementById('num2').value *1;
+  let userinput = document.getElementById('text').innerText = num1/num2;
 }
