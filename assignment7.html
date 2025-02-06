@@ -5,101 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-            body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Comic Sans MS', cursive, sans-serif; /* Cartoonic font */
-      background: url(https://img.freepik.com/free-vector/safari-tour-realistic-illustration_52683-78209.jpg?ga=GA1.1.875324178.1734968905&semt=ais_hybrid) no-repeat center/cover; /* Cartoonish background */
-    }
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    .container {
-      background: rgba(255, 255, 255, 0.3); /* Blurred container */
-      backdrop-filter: blur(10px);
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      width: 90%;
-      max-width: 400px;
-    }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+        }
 
-    .form-title {
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      text-align: center;
-    }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
 
-    .custom-input {
-      width: 100%;
-      height: 50px;
-      padding: 0 15px;
-      font-size: 16px;
-      border: 2px solid transparent;
-      border-radius: 25px;
-      background: linear-gradient(135deg, #f3f3f3, #e3e3e3);
-      transition: all 0.3s ease-in-out;
-      box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
-      color: #333;
-      outline: none;
-    }
+        h2 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
 
-    .custom-input:focus {
-      background: linear-gradient(135deg, #ffffff, #e0f7fa);
-      border-color: #2196f3;
-      box-shadow: 0 0 8px rgba(33, 150, 243, 0.8);
-    }
+        .btn {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+            transition: 0.3s;
+        }
 
-    .custom-input::placeholder {
-      color: #888;
-      font-style: italic;
-    }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+        }
 
-    .submit-btn {
-      width: 100%;
-      height: 50px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .submit-btn:hover {
-      background: linear-gradient(135deg, #fad0c4, #ff9a9e);
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .submit-btn:active {
-      transform: scale(0.95);
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    }
+        .btn:active {
+            transform: scale(0.9);
+        }
+    
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <div class="form-title">Welcome to the Login Form!</div>
         <input type="text" class="custom-input" placeholder="Enter your Username" id="user">
         <input type="email" class="custom-input" placeholder="Enter your Email" id="pass">
         <input type="password" class="custom-input" placeholder="Enter your Password" id="gmail">
         <button class="submit-btn" onclick="Tasks3()">Submit</button>
-      </div>
+      </div> -->
 
-
+      <div class="container">
+        <h2 id="text">Hello, World!</h2>
+        <button class="btn" onclick="Add()">Add</button>
+        <button class="btn" onclick="Delete()">Delete</button>
+        <button class="btn" onclick="Update()">Update</button>
+    </div>
       
-    <script src="script.js"></script>
+    <script>
+      var Names = ['hamza','ayan','muied','anas'];
+      document.getElementById('text').innerText = Names;
+function Add() {
+  var index = prompt('Enter index where you want to add:');
+    var value = prompt('Enter value to add:');
+    Names.splice(index,0,value)
+    document.getElementById('text').innerText = Names;
+
+}
+function Delete(){
+  var index = prompt('Enter index to delete:');
+    Names.splice(index,1)
+    document.getElementById('text').innerText = Names;
+}
+function Update(){
+  var index = prompt('Enter index to update:');
+  var NewValue = prompt('Enter new value:');
+    Names.splice(index,1,NewValue)
+    document.getElementById('text').innerText = Names;
+}
+    </script>
 </body>
 </html>
