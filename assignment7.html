@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-     * {
+      * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -17,41 +17,60 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            background: #0d0d0d;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
             text-align: center;
-            width: 90%;
-            max-width: 400px;
+            padding: 30px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
 
         h2 {
-            color: white;
+            color: #0ff;
             font-size: 24px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #0ff;
+        }
+
+        .input-field {
+            width: 250px;
+            padding: 12px;
+            font-size: 16px;
+            background: transparent;
+            border: 2px solid #0ff;
+            color: #0ff;
+            border-radius: 8px;
+            text-align: center;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-field:focus {
+            box-shadow: 0 0 15px #0ff;
         }
 
         .btn {
-            background: rgba(255, 255, 255, 0.3);
-            color: white;
+            background: transparent;
+            border: 2px solid #ff00ff;
+            color: #ff00ff;
             padding: 12px 20px;
             font-size: 16px;
-            border: none;
+            margin: 10px;
             border-radius: 8px;
             cursor: pointer;
-            margin: 5px;
             transition: 0.3s;
         }
 
         .btn:hover {
-            background: rgba(255, 255, 255, 0.5);
+            background: #ff00ff;
+            color: black;
+            box-shadow: 0 0 15px #ff00ff;
             transform: scale(1.1);
         }
 
@@ -71,33 +90,38 @@
       </div> -->
 
       <div class="container">
-        <h2 id="text">Hello, World!</h2>
+        <h2 id="text"></h2>
         <button class="btn" onclick="Add()">Add</button>
         <button class="btn" onclick="Delete()">Delete</button>
         <button class="btn" onclick="Update()">Update</button>
     </div>
-      
-    <script>
-      var Names = ['hamza','ayan','muied','anas'];
-      document.getElementById('text').innerText = Names;
-function Add() {
-  var index = prompt('Enter index where you want to add:');
-    var value = prompt('Enter value to add:');
-    Names.splice(index,0,value)
-    document.getElementById('text').innerText = Names;
 
-}
-function Delete(){
-  var index = prompt('Enter index to delete:');
-    Names.splice(index,1)
+    <script>
+//Splice Task//
+let Names = ['Hamza', 'Muied', 'Anas'];
+document.getElementById('text').innerText = Names;
+
+function Add() {
+    var Index = prompt('Enter index where you want to add:');
+    var add = prompt('Enter value to add:');
+    Names.splice(Index, 0, add)
     document.getElementById('text').innerText = Names;
 }
-function Update(){
-  var index = prompt('Enter index to update:');
-  var NewValue = prompt('Enter new value:');
-    Names.splice(index,1,NewValue)
+
+function Delete() {
+    var Delete = prompt('Enter index to delete:');
+    Names.splice(Delete, 1)
     document.getElementById('text').innerText = Names;
 }
+
+function Update() {
+    var Index = prompt('Enter index to update:');
+    var NewValue = prompt('Enter new value:');
+    Names.splice(Index,1,NewValue)
+    document.getElementById('text').innerText = Names;
+}
+
+
     </script>
 </body>
 </html>
